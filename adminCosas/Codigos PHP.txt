@@ -1,0 +1,97 @@
+Para Database.php:
+    function consultarDB($tabla = "", $campo = "", $dato = "") {
+        if ($campo == "") {
+            $query = "select * from " . $tabla;
+        } else if ($dato == "") {
+            $query = "select " . $campo . " from " . $tabla;
+        } else {
+            $query = "select * from " . $tabla . " where " . $campo . " = " . $dato;
+        }
+        $res = mysql_query($query);
+        return $res;
+    }
+Para donde tengan la tabla de los clientes, en mi caso tabla_clientes.php:
+<?php
+     require_once 'dataBase.php';
+     $db = new dataBase();
+     $db->conectar();
+     $rec = $db->consultarDB("clientes");
+     while ($row = mysql_fetch_array($rec)) {
+     echo "<tr>";
+     echo "<td><a href='datos_usuario.php?id_Cliente=$row[0]'>$row[0]</a></td>";
+     echo "<td>$row[1]</td>";
+     echo "<td>$row[2]</td>";
+     echo "<td>$row[3]</td>";
+     echo "<td>$row[4]</td>";
+     echo "<td>$row[5]</td>";
+     echo "<td>$row[6]</td>";
+     echo "</tr>";
+     }
+?>
+Para donde tengan los datos del usuario, en mi caso datos_usuario.php:
+
+Saludo al usuario (opcional):
+<h1>                                
+    <?php
+    $id_Cliente = $_GET['id_Cliente'];
+    require_once 'dataBase.php';
+    $db = new dataBase();
+    $db->conectar();
+    $rec = $db->consultarDB("clientes", "id_cliente", $id_Cliente);
+    while ($row = mysql_fetch_array($rec)) {
+    $usuario = $row[1] . " " . $row[2];
+    }
+    echo 'Bienvenido de nuevo ' . $usuario;
+    ?></h1>
+
+Inserción de imagen (solo si pusieron el campo destino en la tabla de usuarios :3):
+<?php
+     $id_Cliente = $_GET['id_Cliente'];
+     require_once 'dataBase.php';
+     $db = new dataBase();
+     $db->conectar();
+     $rec = $db->consultarDB("clientes", "id_cliente", $id_Cliente);
+     while ($row = mysql_fetch_array($rec)) {
+     $ruta = $row[7];
+      }
+     echo '<img height="200 px" width="200 px" src="' . $ruta . '">';
+?>
+
+Información basica del cliente (Opcional):
+<?php
+     $id_Cliente = $_GET['id_Cliente'];
+     require_once 'dataBase.php';
+     $db = new dataBase();
+     $db->conectar();
+     $rec = $db->consultarDB("clientes", "id_cliente", $id_Cliente);
+     while ($row = mysql_fetch_array($rec)) {
+      echo 'ID CLIENTE: ' . $row[0] . "<br>";
+      echo 'NOMBRE: ' . $row[1] . "<br>";
+      echo 'APELLIDO: ' . $row[2] . "<br>";
+      echo 'GENERO: ' . $row[3] . "<br>";
+      echo 'FECHA DE NACIMIENTO: ' . $row[4] . "<br>";
+      echo 'CORREO: ' . $row[5] . "<br>";
+      echo 'HIJOS: ' . $row[6];
+     }
+?>
+
+Obtencion de los datos de activos del usuario (funciona si cambian la funcion con el de arriba en el database.php):
+ <?php
+      $id_Cliente = $_GET['id_Cliente'];
+      require_once 'dataBase.php';
+      $db = new dataBase();
+      $db->conectar();
+      $rec = $db->consultarDB("activos", "id_cliente", $id_Cliente);
+      while ($row = mysql_fetch_array($rec)) {
+       echo "<tr>";
+       echo "<td $row[0]</td>";
+       echo "<td>$row[1]</td>";
+       echo "<td>$row[2]</td>";
+       echo "<td>$row[3]</td>";
+       echo "<td>$row[4]</td>";
+       echo "<td>$row[5]</td>";
+       echo "<td>$row[6]</td>";
+       echo "<td>$row[7]</td>";
+       echo "</tr>";
+      }
+?>
