@@ -44,3 +44,5 @@ insert into categoria(nombre) values ('Activo fijo');
 insert into categoria(nombre) values ('Activo intangible');
 insert into categoria(nombre) values ('Activo subyacente');
 insert into categoria(nombre) values ('Activo funcional');
+
+/*Este es mi codigo de sql, por favor no sean copiones xD*/
