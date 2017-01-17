@@ -127,50 +127,33 @@
                 <button type="button" class="btn" onclick="location = 'tabla_clientes.php'">Ver informe de clientes</button>
             </div>
         </div>
-        <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Modals
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <!-- Button trigger modal -->
-                            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                Launch Demo Modal
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                    <!-- /.modal-content -->
-                                </div>
-                                <!-- /.modal-dialog -->
-                            </div>
-                            <!-- /.modal -->
-                        </div>
-                        <!-- .panel-body -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Launch Demo Modal
+        </button>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Guardar Cambios</h4>
                     </div>
+                    <div class="modal-body">¿Estas seguro de querer guardar los cambios?</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary">GuardarCambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.dataTables.min.js"></script>
         <script src="js/dataTables.bootstrap.min.js"></script>
-        
         <script>
-                        $(document).ready(function () {
-                            $('#dataTables-example').DataTable({
-                                responsive: true
-                            });
+                    $(document).ready(function () {
+                        $('#dataTables-example').DataTable({
+                            responsive: true
                         });
+                    });
         </script>
     </body>
 </html> 
