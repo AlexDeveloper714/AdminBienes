@@ -9,7 +9,7 @@ num_hijos int not null,
 ruta varchar(40) not null);
 
 create table activos(
-id_activos int not null primary key,
+id_activos int not null primary key auto_increment,
 tipo_activo varchar(40) not null,
 id_cliente int not null,
 categoria varchar(40) not null,

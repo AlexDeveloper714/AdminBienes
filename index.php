@@ -100,7 +100,6 @@
                                     Descripci&oacute;n <b>* </b><textarea id="describir" name="describir" placeholder="Describe tu situación" class="form-control" rows="3" required></textarea>
                                 </div>
                                 <div id="der">
-                                    Id Activo: <b>* </b><input type="number" id="idActivo" name="idActivo"  class="form-control" required>                   
                                     Categoria: <b>* </b><select id="categoria" name="categoria"  class="form-control" required>
                                         <?php
                                         require_once 'database.php';

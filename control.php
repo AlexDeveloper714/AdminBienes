@@ -19,7 +19,7 @@ if (isset($_POST['enviarCliente'])) {
 
 if (isset($_POST['enviarActivo'])) {
     $db2->conectar();
-    $db2->insertarActivo(array($_POST ['idActivo'], $_POST['tipoActivo'], $_POST['idCliente'],
+    $db2->insertarActivo(array(0, $_POST['tipoActivo'], $_POST['idCliente'],
         $_POST['categoria'], $_POST ['marca'], $_POST['modelo'], $_POST['describir'], $_POST['notas']), "activos");
     require 'index.php';
 }
