@@ -59,7 +59,7 @@
                                     <input type="file"  id="file" name="file" class="btn-group"required>
                                 </div>
                             </fieldset><br>
-                            <input type="submit" id="envioCl" name="enviarCliente" value="Enviar Cliente" class="btn">
+                            <input type="submit" id="envioCl" name="enviarCliente" value="Enviar Cliente" class="btn" data-toggle="modal" data-target="#myModal">
                         </form>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                                     Notas:<textarea id="notas" name="notas" placeholder="Escribe tus comentarios" class="form-control" rows="3"></textarea>
                                 </div>
                             </fieldset><br>
-                            <input type="submit" id="envioAc" name="enviarActivo" value="Enviar Activo" class="btn">
+                            <input type="submit" id="envioAc" name="enviarActivo" value="Enviar Activo" class="btn" data-toggle="modal" data-target="#myModal">
                         </form>
                     </div>
                 </div>
@@ -127,20 +127,18 @@
                 <button type="button" class="btn" onclick="location = 'tabla_clientes.php'">Ver informe de clientes</button>
             </div>
         </div>
-        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            Launch Demo Modal
-        </button>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Guardar Cambios</h4>
+                        <h1><i class="fa fa-save fa"></i> Guardar Cambios</h1>
                     </div>
                     <div class="modal-body">¿Estas seguro de querer guardar los cambios?</div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                        <button type="button" class="btn btn-primary">GuardarCambios</button>
+                        
                     </div>
                 </div>
             </div>
@@ -149,11 +147,26 @@
         <script src="js/jquery.dataTables.min.js"></script>
         <script src="js/dataTables.bootstrap.min.js"></script>
         <script>
-                    $(document).ready(function () {
-                        $('#dataTables-example').DataTable({
-                            responsive: true
-                        });
-                    });
+    function capturar()
+    {
+        // obtenemos e valor por el numero de elemento
+        var porElementos=document.forms["form1"].elements[0].value;
+        // Obtenemos el valor por el id
+        var porId=document.getElementById("nombre").value;
+        // Obtenemos el valor por el Nombre
+        var porNombre=document.getElementsByName("nombre")[0].value;
+        // Obtenemos el valor por el tipo de tag
+        var porTagName=document.getElementsByTagName("input")[0].value;
+        // Obtenemos el valor por el nombre de la clase
+        var porClassName=document.getElementsByClassName("formulario")[0].value;
+ 
+        document.getElementById("resultado").innerHTML=" \
+            Por elementos: "+porElementos+" \
+            <br>Por ID: "+porId+" \
+            <br>Por Nombre: "+porNombre+" \
+            <br>Por TagName: "+porTagName+" \
+            <br>Por ClassName: "+porClassName;
+    }
         </script>
     </body>
 </html> 
