@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tabla de Clientes</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/metisMenu_min.css" rel="stylesheet">
         <link href="css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="css/sb-admin-2.css" rel="stylesheet">
@@ -32,14 +31,14 @@
             <div id="page-wrapper">
                 <div class="row">
                     <h1 class="page-header"><i class="fa fa-empire fa-fw"></i>Tabla Clientes</h1>
-                    <div class="col-md-12">
+                    <div class="col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Resultados Busquedas
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
-                                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <table width="100%" class="table table-striped table-bordered table-hover table-condensed" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>id-Cliente</th>
@@ -82,6 +81,7 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.dataTables.min.js"></script>
         <script src="js/dataTables.bootstrap.min.js"></script>
+        <script src="js/dataTables.responsive.js"></script>
         <script>
                     $(document).ready(function () {
                         $('#dataTables-example').DataTable({

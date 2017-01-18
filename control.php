@@ -1,5 +1,4 @@
 <?php
-
 require_once 'database.php';
 $db2 = new database();
 if (isset($_POST['enviarCliente'])) {
@@ -14,7 +13,7 @@ if (isset($_POST['enviarCliente'])) {
     rename($destino, $destino2);
     if ($db2->verificarIdClientes($_POST ['cedula'], "clientes")) {
         echo "<h1>
-           Usuario ya existe, retrocediendo...
+           Cedula ya registrada, retrocediendo...
        </h1>";
         echo "<script type=\"text/javascript\">
             setTimeout(function(){ history.go(-1); },500);

@@ -34,7 +34,6 @@ class database {
         $existe = false;
         $query="select id_cliente from ".$tabla." where id_cliente=".$idCliente;
         $existe=mysql_query($query);
-        mysql_query("select id_cliente from ".$tabla." where id_cliente=".$idCliente) or die("Mal SQL".$query);
         return $existe;
     }
 
