@@ -8,6 +8,7 @@
         <link href="css/metisMenu_min.css" rel="stylesheet">
         <link href="css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="css/sb-admin-2.css" rel="stylesheet">
+        <link href="css/dataTables.responsive.css" rel="stylesheet">
     </head>
     <body>
         <div id="wrapper">
@@ -36,40 +37,41 @@
                             <div class="panel-heading">
                                 Resultados Busquedas
                             </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <table width="100%" class="table table-striped table-bordered table-hover table-condensed" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>id-Cliente</th>
-                                            <th>nombre</th>
-                                            <th>apellido</th>
-                                            <th>genero</th>
-                                            <th>fecha nacimiento</th>
-                                            <th>correo</th>
-                                            <th># hijos</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>                            
-                                        <?php
-                                        require_once 'dataBase.php';
-                                        $db = new dataBase();
-                                        $db->conectar();
-                                        $rec = $db->consultarDB("clientes");
-                                        while ($row = mysql_fetch_array($rec)) {
-                                            echo "<tr>";
-                                            echo "<td><a href='datos_usuario.php?id_Cliente=$row[0]'>$row[0]</a></td>";
-                                            echo "<td>$row[1]</td>";
-                                            echo "<td>$row[2]</td>";
-                                            echo "<td>$row[3]</td>";
-                                            echo "<td>$row[4]</td>";
-                                            echo "<td>$row[5]</td>";
-                                            echo "<td>$row[6]</td>";
-                                            echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                            <div class="panel-body table-responsive">
+                                <div class="table-responsive">
+                                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>id-Cliente</th>
+                                                <th>nombre</th>
+                                                <th>apellido</th>
+                                                <th>genero</th>
+                                                <th>fecha nacimiento</th>
+                                                <th>correo</th>
+                                                <th># hijos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                            
+                                            <?php
+                                            require_once 'dataBase.php';
+                                            $db = new dataBase();
+                                            $db->conectar();
+                                            $rec = $db->consultarDB("clientes");
+                                            while ($row = mysql_fetch_array($rec)) {
+                                                echo "<tr>";
+                                                echo "<td><a href='datos_usuario.php?id_Cliente=$row[0]'>$row[0]</a></td>";
+                                                echo "<td>$row[1]</td>";
+                                                echo "<td>$row[2]</td>";
+                                                echo "<td>$row[3]</td>";
+                                                echo "<td>$row[4]</td>";
+                                                echo "<td>$row[5]</td>";
+                                                echo "<td>$row[6]</td>";
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
