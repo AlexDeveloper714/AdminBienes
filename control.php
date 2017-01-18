@@ -13,17 +13,15 @@ if (isset($_POST['enviarCliente'])) {
     copy($ruta, $destino);
     rename($destino, $destino2);
     if ($db2->verificarIdClientes($_POST ['cedula'], "clientes")) {
-//        sleep(5);
-        set_time_limit(10);
-        echo "<h5>
-           Usuario ya existe;
-       </h5>";
+//        set_time_limit(10);
+        echo "<h1>
+           Usuario ya existe, retrocediendo...
+       </h1>";
         echo "<script type=\"text/javascript\">
             setTimeout(function(){ alert('Hello'); },5000);
        </script>";
         echo "<script type=\"text/javascript\">
-            setTimeout(function(){ alert('Hello'); },5000);
-           history.go(-1);
+             history.go(-1);
        </script>";
         exit;
     } else {
