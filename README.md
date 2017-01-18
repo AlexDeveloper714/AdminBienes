@@ -1,3 +1,4 @@
 # AdminBienes
 Pagina de PHP pensada para futuros proyectos
-dfdf
+# Objetivos
+Ser xD,xD,xD en PHP
