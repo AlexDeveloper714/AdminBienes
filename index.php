@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tabla de Clientes</title>
-        <link href="css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="css/metisMenu_min.css" rel="stylesheet">
         <link href="css/sb-admin-2.css" rel="stylesheet">
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet">
     </head>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" id="banner">
@@ -148,7 +148,7 @@
                                 </div>
                                 <div class="modal-body"><h3>¿Estas seguro de querer guardar los cambios?</h3></div>
                                 <div class="modal-footer">
-                                    <button type="submit" id="envioAc" name="enviarActivo" class="btn" data-toggle="modal" data-target="#myModal">Guardar Cambios</button>
+                                    <button type="submit" id="envioAc" name="enviarActivo" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Guardar Cambios</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
                                 </div>
                             </div>
@@ -162,26 +162,8 @@
             <input type="button" id="next" name="next" value="Siguiente" class="btn">
             <button type="button" class="btn" onclick="location = 'tabla_clientes.php'">Ver informe de clientes</button>
         </div>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h1><i class="fa fa-save fa"></i> Guardar Cambios</h1>
-                    </div>
-                    <div class="modal-body">¿Estas seguro de querer guardar los cambios?</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-
-                    </div>
-                </div>
-            </div>
-        </div>
         <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.dataTables.min.js"></script>
-        <script src="js/dataTables.bootstrap.min.js"></script>
-        <script>
+<!--        <script>
                 function capturar()
                 {
                     // obtenemos e valor por el numero de elemento
@@ -203,6 +185,6 @@
             <br>Por ClassName: " + porClassName;
                 }
 
-        </script>
+        </script>-->
     </body>
 </html> 
