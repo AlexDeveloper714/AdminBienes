@@ -76,8 +76,8 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-default" onclick="location = 'index.php'">Regresar al formulario</button>
-                <button type="button" class="btn btn-default" onclick="location = window.location">Actualizar Información</button>
+                <button type="button" class="btn btn-default" onclick="location = 'index.php'">Ir al formulario</button>
+                <button type="button" class="btn btn-default" onclick="location = window.location">Actualizar Info</button>
             </div>
         </div>
         <script src="js/jquery.min.js"></script>
@@ -85,11 +85,11 @@
         <script src="js/dataTables.bootstrap.min.js"></script>
         <script src="js/dataTables.responsive.js"></script>
         <script>
-                    $(document).ready(function () {
-                        $('#dataTables-example').DataTable({
-                            responsive: true
+                        $(document).ready(function () {
+                            $('#dataTables-example').DataTable({
+                                responsive: true
+                            });
                         });
-                    });
         </script>
     </body>
 </html> 
