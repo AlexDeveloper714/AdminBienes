@@ -5,7 +5,7 @@ y genera las relaciones DB, facilitando los usos de la pagina
 Emprender formas de mejorar las conductas y alcanzar metas
 en la creación de paginas, para asi comprender un poco mas 
 sobre: JS (JavaScript),HTML5, PHP y conexiones SQL.
-> Citas xD
+> Citas xD > 
 ´Codigos´
 [github](www.github.com)
 #Checlist
@@ -13,7 +13,7 @@ sobre: JS (JavaScript),HTML5, PHP y conexiones SQL.
 - [ ] \(Opcional) Pinche Flojo
 @AlexDeveloper714
 Imagen
-> *Usar referencia URL proyecto para cargar las imagenes e iconos :3*
+*Usar referencia URL proyecto para cargar las imagenes e iconos :3*
 `Codigo para empezar xD`
 ![Image of LinkToCat](https://octodex.github.com/images/linktocat.jpg)
 
