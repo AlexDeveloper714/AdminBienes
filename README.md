@@ -14,6 +14,7 @@ sobre: JS (JavaScript),HTML5, PHP y conexiones SQL.
 @AlexDeveloper714
 Imagen
 >Usar referencia URL proyecto para cargar las imagenes e iconos :3
+
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 Cosas que falten | Cosas por hacer
