@@ -118,12 +118,12 @@
                                             }
                                             ?>
                                         </select>
-                                        Modelo: <b>* </b><input type="text" onkeypress="validarActivo()" id="modelo" name="modelo"  class="form-control" required>
+                                        Modelo: <b>* </b><input type="text" id="modelo" name="modelo"  class="form-control" required>
                                         Notas:<textarea id="notas" name="notas" placeholder="Escribe tus comentarios" class="form-control" rows="3"></textarea>
                                     </h5>
                                 </div>
                             </fieldset><br>
-                            <button type="submit" id="envioAc" name="enviarActivo" class="btn" data-toggle="modal" data-target="#myModal" disabled>Enviar Activo</button>
+                            <button type="submit" id="envioAc" name="enviarActivo" class="btn" data-toggle="modal" data-target="#myModal">Enviar Activo</button>
                         </form>
                     </div>
                 </div>

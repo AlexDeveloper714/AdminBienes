@@ -30,11 +30,19 @@ class database {
         mysql_query(" insert into " . $tabla . " values( " . $valoresFila . ");")or die("la consulta fallo (insertar)" . mysql_error());
     }
 
+    function verificarIdClientes($idCliente, $tabla = "") {
+        $existe = false;
+        $query="select id_cliente from ".$tabla." where id_cliente=".$idCliente;
+        $existe=mysql_query($query);
+        mysql_query("select id_cliente from ".$tabla." where id_cliente=".$idCliente) or die("Mal SQL".$query);
+        return $existe;
+    }
+
     function actualizarActivos($fila = array(), $tabla = "", $id_Activo = "") {
         $actualizar = "update " . $tabla . " set tipo_activo='$fila[0]', "
                 . "categoria='$fila[1]', marca='$fila[2]', modelo='$fila[3]',"
                 . " descripcion='$fila[4]', notas='$fila[5]' where id_activos='$id_Activo'";
-        $res=mysql_query($actualizar)or die("la consulta fallo (insertar)" . mysql_error());
+        $res = mysql_query($actualizar)or die("la consulta fallo (insertar)" . mysql_error());
         return $res;
     }
 
@@ -49,7 +57,7 @@ class database {
             $valoresFila = $valoresFila . " '" . $val . "', ";
         }
         $valoresFila = substr($valoresFila, 0, -2);
-        //quitar en sql_error($link) si no es link + $this-> link
+//quitar en sql_error($link) si no es link + $this-> link
         mysql_query(" insert into " . $tabla . " values( " . $valoresFila . ");")or die("la consulta fallo(insertarActivo)" . mysql_error());
     }
 

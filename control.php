@@ -12,9 +12,20 @@ if (isset($_POST['enviarCliente'])) {
     $destino2 = "img/" . $exten;
     copy($ruta, $destino);
     rename($destino, $destino2);
-    $db2->insertar(array($_POST ['cedula'], $_POST['nombre'], $_POST['apellido'],
-        $_POST['genero'], $_POST ['fecha'], $_POST['correo'], $_POST['hijos'], $destino2), "clientes");
-    require 'index.php';
+    if ($db2->verificarIdClientes($_POST ['cedula'], "clientes")) {
+//        sleep(5);
+        echo "<h5>
+           Usuario ya existe;
+       </h5>";
+        echo "<script type=\"text/javascript\">
+           history.go(-1);
+       </script>";
+        exit;
+    } else {
+        $db2->insertar(array($_POST ['cedula'], $_POST['nombre'], $_POST['apellido'],
+            $_POST['genero'], $_POST ['fecha'], $_POST['correo'], $_POST['hijos'], $destino2), "clientes");
+        require 'index.php';
+    }
 }
 
 if (isset($_POST['enviarActivo'])) {
