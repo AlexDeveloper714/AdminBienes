@@ -13,8 +13,8 @@ sobre: JS (JavaScript),HTML5, PHP y conexiones SQL.
 - [ ] \(Opcional) Pinche Flojo
 @AlexDeveloper714
 Imagen
->Usar referencia URL proyecto para cargar las imagenes e iconos :3
-
+> *Usar referencia URL proyecto para cargar las imagenes e iconos :3*
+`Codigo para empezar xD`
 ![Image of LinkToCat](https://octodex.github.com/images/linktocat.jpg)
 
 Cosas que falten | Cosas por hacer
