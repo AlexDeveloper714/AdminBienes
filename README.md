@@ -6,7 +6,6 @@ Emprender formas de mejorar las conductas y alcanzar metas
 en la creación de paginas, para asi comprender un poco mas 
 sobre: JS (JavaScript),HTML5, PHP y conexiones SQL.
 > Citas xD
-´Codigos´
 [github](www.github.com)
 #Checlist
 - [x] Aprovado el uso de PHP
