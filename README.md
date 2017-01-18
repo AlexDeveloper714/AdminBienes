@@ -9,7 +9,7 @@ sobre: JS (JavaScript),HTML5, PHP y conexiones SQL.
 ´Codigos´
 [github](www.github.com)
 #Checlist
--[X] Aprovado el uso de PHP
+- [x] Aprovado el uso de PHP
 - [ ] \(Opcional) Pinche Flojo
 @AlexDeveloper714
 Imagen
