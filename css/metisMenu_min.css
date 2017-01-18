@@ -12,20 +12,6 @@ nav#banner2{
     font-size: 18pt;
     color: #F1B32C;
 }
-div#form{
-    width: 80%;
-    margin: auto;
-}
-
-#apellido, #cedula, #correo,#nombre,#fecha, #hijos{
-    width: 40%;
-    margin: auto;
-}
-
-#idActivo,#idCliente,#marca,#modelo,#categoria,#describir,#tipoActivo,#notas{
-    width: 40%;
-    margin: auto;
-}
 nav#banner{
     height: 10%;
     margin: auto;
@@ -48,31 +34,18 @@ div#activoB{
     color: #FFFFFF;
 }
 div#cliente{
-    height: 40%;
-    margin: auto;
-    font-size: 13pt;
+/*    height: 40%;*/
+/*    margin: auto;
+    font-size: 13pt;*/
     background-color: #E6E6E6;
 }
 div#activo{
-    height: 40%;
+/*    height: 40%;
     margin: auto;
-    font-size: 13pt;
+    font-size: 13pt;*/
     background-color: #E6E6E6;
 }
-div#izq{
-    width: 50%;
-    height: 50%;
-    float: left;
-    text-align: justify;
-    margin: auto;
-}
-div#der{
-    width: 50%;
-    height: 50%;
-    float: right;
-    text-align: justify;
-    margin: auto;
-}
+
 b{
     color:#FC0E15; 
 }
