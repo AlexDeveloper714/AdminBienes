@@ -95,7 +95,7 @@
                                         $db = new database();
                                         $db->conectar();
                                         $res = $db->consultarDB("clientes", "id_cliente");
-                                        while ($row = mysql_fetch_array($res)) {
+                                        while ($row = mysqli_fetch_array($res)) {
                                             echo '<option>';
                                             echo $row['id_cliente'];
                                             echo '</option>';
@@ -108,7 +108,7 @@
                                         $db = new database();
                                         $db->conectar();
                                         $res = $db->consultarDB("tipo_activo", "nombre");
-                                        while ($row = mysql_fetch_array($res)) {
+                                        while ($row = mysqli_fetch_array($res)) {
                                             echo '<option>';
                                             echo $row['nombre'];
                                             echo '</option>';
@@ -127,7 +127,7 @@
                                         $db = new database();
                                         $db->conectar();
                                         $res = $db->consultarDB("categoria", "nombre");
-                                        while ($row = mysql_fetch_array($res)) {
+                                        while ($row = mysqli_fetch_array($res)) {
                                             echo '<option>';
                                             echo $row['nombre'];
                                             echo '</option>';

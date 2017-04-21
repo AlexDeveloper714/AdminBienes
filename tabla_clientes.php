@@ -57,7 +57,7 @@
                                             $db = new dataBase();
                                             $db->conectar();
                                             $rec = $db->consultarDB("clientes");
-                                            while ($row = mysql_fetch_array($rec)) {
+                                            while ($row = mysqli_fetch_array($rec)) {
                                                 echo "<tr>";
                                                 echo "<td><a href='datos_usuario.php?id_Cliente=$row[0]'>$row[0]</a></td>";
                                                 echo "<td>$row[1]</td>";

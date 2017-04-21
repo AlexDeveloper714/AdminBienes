@@ -40,7 +40,7 @@
                             $db = new dataBase();
                             $db->conectar();
                             $rec = $db->consultarDB("clientes", "id_cliente", $id_Cliente);
-                            while ($row = mysql_fetch_array($rec)) {
+                            while ($row = mysqli_fetch_array($rec)) {
                                 $usuario = $row[1] . " " . $row[2];
                             }
                             echo 'Bienvenido de nuevo ' . $usuario;
@@ -50,7 +50,7 @@
                             require_once 'dataBase.php';
                             $db->conectar();
                             $rec = $db->consultarDB("clientes", "id_cliente", $id_Cliente);
-                            while ($row = mysql_fetch_array($rec)) {
+                            while ($row = mysqli_fetch_array($rec)) {
                                 $ruta = $row[7];
                             }
                             echo '<img height="200 px" width="200 px" src="' . $ruta . '">';
@@ -61,7 +61,7 @@
                             require_once 'dataBase.php';
                             $db->conectar();
                             $rec = $db->consultarDB("clientes", "id_cliente", $id_Cliente);
-                            while ($row = mysql_fetch_array($rec)) {
+                            while ($row = mysqli_fetch_array($rec)) {
                                 echo 'ID CLIENTE: ' . $row[0] . "<br>";
                                 echo 'NOMBRE: ' . $row[1] . "<br>";
                                 echo 'APELLIDO: ' . $row[2] . "<br>";
@@ -111,7 +111,7 @@
                                         require_once 'dataBase.php';
                                         $db->conectar();
                                         $rec = $db->consultarDB("activos", "id_cliente", $id_Cliente);
-                                        while ($row = mysql_fetch_array($rec)) {
+                                        while ($row = mysqli_fetch_array($rec)) {
                                             echo "<tr>";
                                             echo "<td>$row[0]</td>";
                                             echo "<td>$row[1]</td>";
@@ -140,7 +140,7 @@
                                             require_once 'database.php';
                                             $db->conectar();
                                             $res = $db->consultarDB("activos", "id_cliente", $id_Cliente, "id_activos");
-                                            while ($row = mysql_fetch_array($res)) {
+                                            while ($row = mysqli_fetch_array($res)) {
                                                 echo '<option>';
                                                 echo $row[0];
                                                 echo '</option>';
@@ -152,7 +152,7 @@
                                                 require_once 'database.php';
                                                 $db->conectar();
                                                 $res = $db->consultarDB("tipo_activo", "nombre");
-                                                while ($row = mysql_fetch_array($res)) {
+                                                while ($row = mysqli_fetch_array($res)) {
                                                     echo '<option>';
                                                     echo $row['nombre'];
                                                     echo '</option>';
@@ -168,7 +168,7 @@
                                                 require_once 'database.php';
                                                 $db->conectar();
                                                 $res = $db->consultarDB("categoria", "nombre");
-                                                while ($row = mysql_fetch_array($res)) {
+                                                while ($row = mysqli_fetch_array($res)) {
                                                     echo '<option>';
                                                     echo $row['nombre'];
                                                     echo '</option>';
