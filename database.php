@@ -27,13 +27,15 @@ class database {
             $valoresFila = $valoresFila . " '" . $val . "', ";
         }
         $valoresFila = substr($valoresFila, 0, -2);
-        mysqli_query($this->link," insert into " . $tabla . " values( " . $valoresFila . ");")or die("la consulta fallo (insertar)" . mysqli_error($this->link));
-    }
+        mysqli_query($this->link," insert into " . $tabla . " values( " . $valoresFila . ");")or die("la consulta fallo (insertar)" . mysqli_errno($this->link));
+        
+        }
 //Función erronea
     function verificarIdClientes($idCliente, $tabla = "") {
         $query="select id_cliente from ".$tabla." where id_cliente=".$idCliente;
         $existe=mysqli_query($this->link,$query);
-        return $existe;
+        $cantidad=mysqli_num_rows($existe);
+        return $cantidad;
     }
 
     function actualizarActivos($fila = array(), $tabla = "", $id_Activo = "") {

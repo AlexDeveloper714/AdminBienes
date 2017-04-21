@@ -12,20 +12,19 @@ if (isset($_POST['enviarCliente'])) {
     $destino2 = "img/" . $exten;
     copy($ruta, $destino);
     rename($destino, $destino2);
-//    if ($db2->verificarIdClientes($_POST ['cedula'], "clientes")) {
-//        echo "<h1>
-//           Cedula ya registrada, retrocediendo...
-//       </h1>";
-//        echo "<script type=\"text/javascript\">
-//            setTimeout(function(){ history.go(-1); },500);
-//       </script>";
-//        exit;
-//    } else {
-//        
-//    }
-    $db2->insertar(array($_POST ['cedula'], $_POST['nombre'], $_POST['apellido'],
-        $_POST['genero'], $_POST ['fecha'], $_POST['correo'], $_POST['hijos'], $destino2), "clientes");
-    require 'index.php';
+    if ($db2->verificarIdClientes($_POST ['cedula'], "clientes") > 0) {
+        echo "<h1>
+           Cedula ya registrada, retrocediendo...
+       </h1>";
+        echo "<script type=\"text/javascript\">
+            setTimeout(function(){ history.go(-1); },500);
+       </script>";
+        exit;
+    } else {
+        $db2->insertar(array($_POST ['cedula'], $_POST['nombre'], $_POST['apellido'],
+            $_POST['genero'], $_POST ['fecha'], $_POST['correo'], $_POST['hijos'], $destino2), "clientes");
+        require 'index.php';
+    }
 }
 
 if (isset($_POST['enviarActivo'])) {
