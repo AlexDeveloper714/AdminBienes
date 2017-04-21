@@ -163,6 +163,7 @@
             <button type="button" class="btn" onclick="location = 'tabla_clientes.php'">Ver informe de clientes</button>
         </div>
         <script src="js/jquery.min.js"></script>
+        <script src="js/funcionesPag.js"></script>
 <!--        <script>
                 function capturar()
                 {
