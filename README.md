@@ -14,7 +14,7 @@ sobre: JS (JavaScript),HTML5, PHP y conexiones SQL*.
 #Cambios Realizados:
 - [x] Manejo de BootStrap y mejoras en el diseño
 - [x] Revisiones a las clase PHP
-
+- [x] Creacion de Tags OJO
 Usuario: @AlexDeveloper714
 
 `Ejemplos de codigo `
